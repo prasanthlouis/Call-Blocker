@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+      android:background="@drawable/norm"
+      android:id="@+id/back1"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/emer"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="emer"
+        android:text="Emergency Calls" />
+
+    <Button
+        android:id="@+id/acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/rcc"
+        android:onClick="accept"
+        android:text="Accept" />
+
+    <Button
+        android:id="@+id/rcc"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/acc"
+        
+        android:layout_toRightOf="@+id/emer"
+        android:onClick="reject"
+        android:text="Reject Calls" />
+
+    <ListView
+        android:id="@+id/black"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_above="@+id/acc"
+        android:layout_alignLeft="@+id/emer"
+        android:layout_marginBottom="24dp" >
+    </ListView>
+
+    <Button
+        android:id="@+id/wl"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/emer"
+        android:layout_alignRight="@+id/emer"
+        android:text="Add WhiteList"
+        android:onClick="wl" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_marginLeft="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+       
+        android:layout_above="@+id/wl"
+        
+        android:ems="10"
+        android:inputType="phone" />
+
+    <ListView
+        android:id="@+id/ListView01"
+        android:layout_width="100dp"
+        android:layout_height="320dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+    </ListView>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ListView01"
+        android:layout_alignTop="@+id/wl"
+        android:text="Add BlackList"
+        android:onClick="bl" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/black"
+        android:layout_marginTop="98dp"
+        android:layout_toRightOf="@+id/black"
+        android:text="CALL STATE" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/wl"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:text="WhiteList Numbers" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/ListView01"
+        android:layout_marginRight="19dp"
+        android:layout_alignParentRight="true"
+        android:text="BlackList Numbers" />
+
+</RelativeLayout>
